@@ -1,58 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body, * {
-    font-family: 'Roboto', sans-serif;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
+  }
 
-h1 {
-    margin: 1rem;
-}
+  h1 {
+    color: #333;
+  }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
+  a {
+    color: #007bff;
+  }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
-}
+  /* Estilos para la página de inicio */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
-.card__email {
-    font-size: 1rem;
-}
+  table, th, td {
+    border: 1px solid #ddd;
+  }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
-}
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
 
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
-}
+  th {
+    background-color: #f2f2f2;
+  }
 
-input[type="text"] {
-    padding: .25rem;
-}
+  /* Estilos para el formulario de actualización de objetos personalizados */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
-input[type="submit"] {
-    background-color: lightgrey;
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
-}
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
