@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Pokemons
+    p
+      a(href='/') Return to the homepage
+    table
+      thead
+        tr
+          th Name
+          th Type
+          th Power
+      tbody
+        each customObject in data
+          tr
+            td= customObject.properties.name_pokemon
+            td= customObject.properties.type
+            td= customObject.properties.power
+    .form-wrapper
+            p Enter a new Pokemon
+            form(method="POST")
+                label(for="name_pokemon") Pokemon Name
+                input(type="text" name="name_pokemon" required)
+                label(for="type") Pokemon Type
+                input(type="text" name="type" required)
+                label(for="power") Power
+                input(type="text" name="power" required)
+                input(type="submit" value="Submit")
