@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Pokemons
+    p
+      a(href='/update-cobj') Add Pokemon to this table
+    table
+      thead
+        tr
+          th Name
+          th Type
+          th Power
+      tbody
+        each customObject in data
+          tr
+            td= customObject.properties.name_pokemon
+            td= customObject.properties.type
+            td= customObject.properties.power
